@@ -1,6 +1,6 @@
 {
-  "name": "hws2",
-  "homepage": "http://IgnatZakalinsky.github.io/hws2",
+  "name": "hw_with_autocheck",
+  "homepage": "https://hamitovm.github.io/hw_with_autocheck/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
