@@ -1,12 +1,11 @@
 .sendForm {
-    padding-top: 30px;
+    padding-top: 10px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .textarea {
-    margin-left: 70px;
     padding: 12px 24px 11px;
     resize: none;
     overflow: hidden;

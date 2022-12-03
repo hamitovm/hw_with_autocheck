@@ -10,13 +10,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    /*margin-bottom: 24px;*/
 }
 
 .friendImageAndText {
     display: flex;
     flex-direction: row;
     align-self: start;
-    margin: 24px 140px 0 70px;
+    margin: 0 140px 0 0;
 }
 
 .friendImageAndText img {
@@ -84,4 +85,6 @@
     font-weight: 600;
     font-size: 10px;
     line-height: 12px;
+    margin-bottom: 24px;
+
 }
