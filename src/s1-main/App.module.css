@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 .App {
     --header_height: 60px;
+    max-width: 1280px;
+    margin: 0  auto;
 }
 
 .hw {
-
+    /*margin-top: 144px;*/
 }
 
 .hwTitle {
+    padding: 107px 0 10px 70px;
+    /*border: 2px solid darkslategrey;*/
+    position: relative;
 
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.App::after {
+    content: '';
+    position: absolute;
+    width: 1280px;
+    top: 144px;
+    border: 1px solid #D9D9D9;
 }
