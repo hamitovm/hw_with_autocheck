@@ -1,4 +1,5 @@
 .sidebar {
+    display: none;
     /*border: 1px solid red;*/
     margin: 0;
     padding: 0 70px 0 70px;
@@ -11,6 +12,8 @@
 }
 
 .sidebar.open {
+    display: block;
+
 }
 
 .background {
