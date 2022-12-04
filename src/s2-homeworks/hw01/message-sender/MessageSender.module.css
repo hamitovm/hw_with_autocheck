@@ -10,6 +10,7 @@
     resize: none;
     overflow: hidden;
     width: 976px;
+    min-width: 184px;
     min-height: 40px;
     left: 70px;
     top: 408px;
