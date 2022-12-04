@@ -1,16 +1,19 @@
 .stand {
+    padding: 50px 70px 50px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .inputs {
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
 .buttons {
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     gap: 24px;
