@@ -41,6 +41,7 @@
     min-height: 60px;
     background: #0066CC;
     position: relative;
+    z-index: -1;
 
 }
 

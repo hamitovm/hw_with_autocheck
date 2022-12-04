@@ -9,6 +9,7 @@
     padding: 12px 24px 11px;
     resize: none;
     overflow: hidden;
+    /*width: 976px;*/
     width: 976px;
     min-width: 184px;
     min-height: 40px;

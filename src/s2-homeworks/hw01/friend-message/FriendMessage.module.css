@@ -38,6 +38,8 @@
     min-height: 60px;
     background: #F5F7FB;
     position: relative;
+    z-index: -1;
+
 }
 
 .friendText:after {
@@ -73,6 +75,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+
 }
 
 .friendTime {

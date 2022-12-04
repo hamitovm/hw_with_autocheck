@@ -3,10 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .inputs {
     margin-right: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     gap: 48px;

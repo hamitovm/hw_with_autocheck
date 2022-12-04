@@ -12,7 +12,7 @@
 }
 
 .hwTitle {
-    padding: 107px 0 10px 70px;
+    padding: 67px 0 10px 70px;
     /*border: 2px solid darkslategrey;*/
     position: relative;
 
@@ -21,13 +21,16 @@
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
+    z-index: -1;
 }
 
 .hwTitle::after {
     content: '';
     position: absolute;
     width: 1280px;
-    top: 144px;
+    top: 104px;
     left: 0px;
-    border: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    z-index: -1;
+
 }
