@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.navLinkClass {
+.nav a {
     margin-bottom: 45px;
     text-decoration: none;
     font-family: 'Montserrat';
@@ -42,12 +42,13 @@
     line-height: 27px;
 }
 
-.navLinkClass:hover {
+.nav a:hover {
     text-decoration: underline;
 
 }
 
-.navLinkClass.active {
+.nav a.active {
+
 }
 
 .blue {

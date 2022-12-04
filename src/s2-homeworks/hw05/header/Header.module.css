@@ -1,4 +1,5 @@
 .burgerMenuIcon {
+    cursor: pointer;
     width: 22px;
     margin-left: 70px;
 }
