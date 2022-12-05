@@ -1,15 +1,96 @@
 .radio {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .radio::before {
+
+
+}
+.customRadio {
+    position: absolute;
+    margin-left: -33px;
+
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    vertical-align: text-top;
 }
 
+.radio:checked + .customRadio::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border-radius: 50%;
+}
 
 .radio:checked::before {
+
 }
 
 .label {
+    margin-bottom: 21px;
+    padding-left: 33px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
 }
+
+
+/*.radio {*/
+/*    position: relative;*/
+/*    margin-right: 13px;*/
+/*    margin-bottom: 21px;*/
+/*    display: inline-block;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-color: white;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 50%;*/
+/*    vertical-align: text-top;*/
+/*}*/
+
+/*.radio::before {*/
+
+
+/*}*/
+
+
+/*.radio:checked::before {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    background-color: black;*/
+/*    border-radius: 50%;*/
+/*    vertical-align: text-top;*/
+/*}*/
+
+/*.label {*/
+/*    font-family: 'Montserrat';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 16px;*/
+/*    line-height: 20px;*/
+/*}*/
