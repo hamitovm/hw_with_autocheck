@@ -1,38 +1,12 @@
 .radio {
-    position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+
 }
 
 .radio::before {
 
 
 }
-.customRadio {
-    position: absolute;
-    margin-left: -33px;
 
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 50%;
-    vertical-align: text-top;
-}
-
-.radio:checked + .customRadio::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        content: '';
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: black;
-        border-radius: 50%;
-}
 
 .radio:checked::before {
 
@@ -53,12 +27,16 @@
     flex-direction: column;
 }
 
-
 /*.radio {*/
-/*    position: relative;*/
-/*    margin-right: 13px;*/
-/*    margin-bottom: 21px;*/
-/*    display: inline-block;*/
+    /*position: absolute;*/
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*appearance: none;*/
+/*}*/
+/*.customRadio {*/
+/*    position: absolute;*/
+/*    margin-left: -33px;*/
+
 /*    width: 20px;*/
 /*    height: 20px;*/
 /*    background-color: white;*/
@@ -67,13 +45,7 @@
 /*    vertical-align: text-top;*/
 /*}*/
 
-/*.radio::before {*/
-
-
-/*}*/
-
-
-/*.radio:checked::before {*/
+/*.radio:checked + .customRadio::before {*/
 /*    position: absolute;*/
 /*    top: 50%;*/
 /*    left: 50%;*/
@@ -84,13 +56,4 @@
 /*    height: 10px;*/
 /*    background-color: black;*/
 /*    border-radius: 50%;*/
-/*    vertical-align: text-top;*/
-/*}*/
-
-/*.label {*/
-/*    font-family: 'Montserrat';*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    font-size: 16px;*/
-/*    line-height: 20px;*/
 /*}*/
