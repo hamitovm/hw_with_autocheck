@@ -18,7 +18,7 @@ const arr = [
 ] // value может быть изменено
 
 const HW7 = () => {
-    const [value, onChangeOption] = useState(arr[0].value) // селект и радио должны работать синхронно
+    const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
     // console.log(`value - ${value}`)
 
     return (

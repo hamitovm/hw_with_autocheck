@@ -37,7 +37,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // делают студенты
         console.log('changing')
-        onChange && onChange(e)
+        // onChange && onChange(e)
         onChangeOption && onChangeOption(e.target.value)
         console.log(`radio taped - ${e.target.value}`)
 
@@ -52,19 +52,19 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
         ? options.map((o) => (
               <label key={name + '-' + o.id} className={s.label}>
                   <input
-                      id={id + '-input-' + o.value}
+                      id={id + '-input-' + o.id}
                       className={finalRadioClassName}
                       type={'radio'}
                       // name, checked, value делают студенты
-                      value={o.value}
+                      value={o.id}
                       name={name}
-                      checked={o.value == value}
+                      checked={o.id == value}
                       onChange={onChangeCallback}
                       {...restProps}
                   />
                   <span className={s.customRadio}></span>
                   <span
-                      id={id + '-span-' + o.value}
+                      id={id + '-span-' + o.id}
                       {...spanProps}
                       className={spanClassName}
                   >
