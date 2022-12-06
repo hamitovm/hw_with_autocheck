@@ -1,6 +1,6 @@
-.radio {
+/*.radio {*/
 
-}
+/*}*/
 
 .radio::before {
 
@@ -27,33 +27,33 @@
     flex-direction: column;
 }
 
-/*.radio {*/
-    /*position: absolute;*/
-    /*-webkit-appearance: none;*/
-    /*-moz-appearance: none;*/
-    /*appearance: none;*/
-/*}*/
-/*.customRadio {*/
-/*    position: absolute;*/
-/*    margin-left: -33px;*/
+.radio {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.customRadio {
+    position: absolute;
+    margin-left: -33px;
 
-/*    width: 20px;*/
-/*    height: 20px;*/
-/*    background-color: white;*/
-/*    border: 2px solid black;*/
-/*    border-radius: 50%;*/
-/*    vertical-align: text-top;*/
-/*}*/
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    vertical-align: text-top;
+}
 
-/*.radio:checked + .customRadio::before {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    content: '';*/
-/*    display: inline-block;*/
-/*    width: 10px;*/
-/*    height: 10px;*/
-/*    background-color: black;*/
-/*    border-radius: 50%;*/
-/*}*/
+.radio:checked + .customRadio::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}

@@ -19,6 +19,7 @@ const arr = [
 
 const HW7 = () => {
     const [value, onChangeOption] = useState(arr[0].value) // селект и радио должны работать синхронно
+    // console.log(`value - ${value}`)
 
     return (
         <div id={'hw7'}>
@@ -26,6 +27,7 @@ const HW7 = () => {
 
             {/*демонстрация возможностей компонент:*/}
             <div className={s2.hw}>
+                {/*<span>{value}</span>*/}
                 <div className={s.container}>
                     <div>
                         <SuperSelect
