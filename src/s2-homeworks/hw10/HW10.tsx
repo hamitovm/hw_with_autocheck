@@ -15,11 +15,16 @@ import {Loader} from './Loader'
 
 const HW10 = () => {
     // useSelector, useDispatch // пишет студент
-    const isLoading = false
+    const dispatch = useDispatch()
+
+    const isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading)
 
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
-
+        dispatch(loadingAC(true))
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 1500)
         // setTimeout
     }
 
@@ -28,18 +33,21 @@ const HW10 = () => {
             <div className={s2.hwTitle}>Homework #10</div>
 
             <div className={s2.hw}>
-                {isLoading ? (
-                    <div id={'hw10-loading'}>
-                        <Loader/>
-                    </div>
-                ) : (
-                    <SuperButton
-                        id={'hw10-button-start-loading'}
-                        onClick={setLoading}
-                    >
-                        Set loading...
-                    </SuperButton>
-                )}
+                <div className={s2.hw10}>
+                    {isLoading ? (
+                        <div id={'hw10-loading'}>
+                            <Loader/>
+                        </div>
+                    ) : (
+                        <SuperButton
+                            id={'hw10-button-start-loading'}
+                            onClick={setLoading}
+                        >
+                            Set loading...
+                        </SuperButton>
+                    )}
+                </div>
+
             </div>
         </div>
     )
