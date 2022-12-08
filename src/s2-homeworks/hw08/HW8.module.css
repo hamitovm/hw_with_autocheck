@@ -5,19 +5,68 @@
 }
 
 .users {
+    table-layout: fixed;
+    border-collapse: collapse;
+    min-width: 360px;
+    width: 100%;
+
+
 }
 
 .buttonsContainer {
+    display: flex;
+    margin-bottom: 18px;
+    justify-content: space-between;
+    width: 360px;
+
 }
 
 .container {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 620px;
 }
 
-.thead {
+.thead tr td {
+    padding: 11px 17px 9px;
+
+    /*border: 1px solid red;*/
+    height: 36px;
+    /*background-color: #E5E5E5;*/
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.thead tr {
+    background-color: #E5E5E5;
+
+}
+
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+tbody tr td {
+    padding: 14px 17px 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+
 }
 
 .nameCol {
+
 }
 
 .ageCol {
+
 }
