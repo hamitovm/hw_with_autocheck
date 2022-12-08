@@ -36,10 +36,8 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
 }) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // делают студенты
-        console.log('changing')
         // onChange && onChange(e)
         onChangeOption && onChangeOption(e.target.value)
-        console.log(`radio taped - ${e.target.value}`)
 
     }
     // useEffect(()=> {

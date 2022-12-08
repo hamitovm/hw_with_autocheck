@@ -27,6 +27,7 @@
     flex-direction: column;
     align-items: flex-end;
     max-width: 620px;
+    margin-right: 70px;
 }
 
 .thead tr td {
