@@ -1,4 +1,4 @@
-const initState = {
+const initState: initStateType = {
     themeId: 1,
 }
 

@@ -40,7 +40,9 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         console.log('changing')
         console.log(e)
         onChangeOption &&  onChangeOption(e.target.value)
-        console.log(`select taped - ${e.target.value}`)
+        // console.log(`select taped - ${e.target.value}`)
+        // console.log(`select taped - ${e.target.value}`)
+        // console.log(`type of select taped - ${typeof e.target.value}`)
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
