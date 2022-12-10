@@ -38,10 +38,10 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setText('... все ок)')
-                setInfo('ошибка 500 - обычно означает что скорее всего фронт отправил что-то не то в бэк!')
-                // дописать
 
+                setText(res.data.errorText)
+                setInfo(res.data.info)
+                // дописать
             })
             .catch((e) => {
                 // дописать
@@ -49,14 +49,14 @@ const HW13 = () => {
                     case 400:
                         setCode('Ошибка 400!')
                         setImage(error400)
-                        setText('Ты не отправил success в body вообще!')
-                        setInfo('ошибка 500 - обычно означает что скорее всего фронт отправил что-то не то в бэк!')
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         break;
                     case 500:
                         setCode('Ошибка 500!')
                         setImage(error500)
-                        setText('эмитация ошибки на сервере')
-                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных')
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         break;
                     case 0:
                         setCode('Error!')
@@ -65,7 +65,6 @@ const HW13 = () => {
                         setInfo(e.name)
                         break;
                 }
-
 
             }
             )
