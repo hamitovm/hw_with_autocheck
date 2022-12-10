@@ -2,7 +2,23 @@
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 45px 0;
+
 }
 
 .number {
+    padding-top: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.super_range {
+    min-width: 150px;
+    max-width: 300px;
+    margin: 0 20px;
 }

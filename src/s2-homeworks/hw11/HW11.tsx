@@ -15,7 +15,17 @@ function HW11() {
     const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
 
-    const change = (event: any, value: any) => {
+    const change = (event: Event, value: number | number[]) => {
+
+         if (Array.isArray(value)) {
+             setValue1(value[0])
+             setValue2(value[1])
+             // value[0] > value[1] ? setValue2(value[0]) : setValue2(value[1])
+         } else {
+             setValue1(value)
+             value > value2 && setValue2(value)
+
+         }
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
     }
 
@@ -29,6 +39,10 @@ function HW11() {
                         <span id={'hw11-value'} className={s.number}>{value1}</span>
                         <SuperRange
                             id={'hw11-single-slider'}
+                            value={value1}
+                            onChange={change}
+                            className={s.super_range}
+
                             // сделать так чтоб value1 изменялось // пишет студент
 
                         />
@@ -37,6 +51,9 @@ function HW11() {
                         <span id={'hw11-value-1'} className={s.number}>{value1}</span>
                         <SuperRange
                             id={'hw11-double-slider'}
+                            value={[value1, value2]}
+                            onChange={change}
+                            className={s.super_range}
                             // сделать так чтоб value1/2 изменялось // пишет студент
 
                         />
