@@ -35,8 +35,8 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-                res && setTechs(res.data.techs)
                 // сохранить пришедшие данные
+                res && setTechs(res.data.techs)
                 setLoading(false)
                 //
             })
@@ -69,18 +69,20 @@ const HW14 = () => {
             <div className={s2.hwTitle}>Homework #14</div>
 
             <div className={s2.hw}>
-                <SuperDebouncedInput
-                    id={'hw14-super-debounced-input'}
-                    value={find}
-                    onChangeText={onChangeText}
-                    onDebouncedChange={sendQuery}
-                />
+                <div className={s.container}>
+                    <SuperDebouncedInput
+                        id={'hw14-super-debounced-input'}
+                        value={find}
+                        onChangeText={onChangeText}
+                        onDebouncedChange={sendQuery}
+                    />
 
-                <div id={'hw14-loading'} className={s.loading}>
-                    {isLoading ? '...ищем' : <br/>}
+                    <div id={'hw14-loading'} className={s.loading}>
+                        {isLoading ? '...ищем' : <br/>}
+                    </div>
+                    {mappedTechs}
                 </div>
 
-                {mappedTechs}
             </div>
         </div>
     )

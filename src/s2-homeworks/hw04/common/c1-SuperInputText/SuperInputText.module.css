@@ -1,9 +1,10 @@
 .input:focus {
-    border: none;
+    border: 1px solid #0066CC;
+    outline: none;
 }
 
 .input {
-    padding: 5px;
+    padding: 5px 12px;
     border: none;
     width: 372px;
     min-width: 120px;

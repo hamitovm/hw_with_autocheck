@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {Loader} from "../hw10/Loader";
 
 /*
 * 1 - дописать SuperPagination
@@ -48,7 +49,13 @@ const HW15 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
+                if (res) {
+                    setTotalCount(res.data.totalCount)
+                    setTechs(res.data.techs)
+                    console.log(res.data.techs)
 
+                }
+                setLoading(false)
                 //
             })
     }
@@ -56,11 +63,13 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
         // sendQuery(
+        sendQuery({page: newPage, count: newCount})
         // setSearchParams(
+        setSearchParams([['page', newPage.toString()], ['count', newCount.toString()]])
 
         //
     }
@@ -69,17 +78,20 @@ const HW15 = () => {
         // делает студент
 
         // setSort(
+        setSort(newSort)
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        setPage(1)
         // sendQuery(
+        sendQuery({page, count, sort: newSort})
         // setSearchParams(
+        setSearchParams([['page', page.toString()], ['count', count.toString()], ['sort', newSort.toString()]])
 
         //
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count ? params.count : 4})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
@@ -99,31 +111,36 @@ const HW15 = () => {
     return (
         <div id={'hw15'}>
             <div className={s2.hwTitle}>Homework #15</div>
-
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                <div className={s.container}>
+                    <SuperPagination
+                        page={page}
+                        itemsCountForPage={count}
+                        totalCount={totalCount}
+                        onChange={onChangePagination}
+                    />
+                    {idLoading
+                        ? <Loader/>
+                        : <div className={s.spreadsheet}>
+                            <div className={s.rowHeader}>
+                                <div className={s.techHeader}>
+                                    Tech
+                                    <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                                </div>
 
-                <SuperPagination
-                    page={page}
-                    itemsCountForPage={count}
-                    totalCount={totalCount}
-                    onChange={onChangePagination}
-                />
+                                <div className={s.developerHeader}>
+                                    Developer
+                                    <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
+                                </div>
+                            </div>
 
-                <div className={s.rowHeader}>
-                    <div className={s.techHeader}>
-                        tech
-                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
-                    </div>
+                            {mappedTechs}
+                        </div>}
 
-                    <div className={s.developerHeader}>
-                        developer
-                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
-                    </div>
+
                 </div>
-
-                {mappedTechs}
             </div>
+
         </div>
     )
 }

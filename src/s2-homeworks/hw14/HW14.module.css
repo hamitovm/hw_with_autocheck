@@ -1,7 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 372px;
+    min-height: 150px;
+}
 .tech {
 
 }
 
 .loading {
-
+    align-self: flex-end;
 }

@@ -28,7 +28,7 @@ const HW7 = () => {
             <div className={s2.hw}>
                 {/*<span>{value}</span>*/}
                 <div className={s.container}>
-                    <div>
+                    <div className={s.superSelectContainer}>
                         <SuperSelect
                             id={'hw7-super-select'}
                             options={arr}

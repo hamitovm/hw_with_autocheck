@@ -1,3 +1,16 @@
+.container {
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spreadsheet {
+    display: flex;
+    flex-direction: column;
+}
+
 .tech {
     width: 50vw;
 }
@@ -8,20 +21,50 @@
 
 .techHeader {
     width: 50vw;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .developerHeader {
-
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .row {
+    padding: 11px 17px;
     display: flex;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .rowHeader {
+    padding: 11px 34px 11px 17px;
     display: flex;
+    background: #E5E5E5;
 }
 
 .loading {
+    width: 600px;
+    background-image: url(../../assets/images/Spinner-1s-200px.svg);
+}
 
+.sort {
+    position: relative;
+}
+
+.sortIcon {
+    position: absolute;
+    width: 8px;
+    top: 4px;
+    right: -15px;
 }
