@@ -123,15 +123,15 @@ const HW15 = () => {
                         ? <Loader/>
                         : <div className={s.spreadsheet}>
                             <div className={s.rowHeader}>
-                                <div className={s.techHeader}>
-                                    Tech
+                                {/*<div className={s.techHeader}>  */}
+                                {/*    Tech*/}
                                     <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
-                                </div>
+                                {/*</div>*/}
 
-                                <div className={s.developerHeader}>
-                                    Developer
+                                {/*<div className={s.developerHeader}>*/}
+                                {/*    Developer*/}
                                     <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
-                                </div>
+                                {/*</div>*/}
                             </div>
 
                             {mappedTechs}
